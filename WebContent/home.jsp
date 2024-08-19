@@ -26,7 +26,11 @@
                 <li>トップ</li>
                 <li>プロフィール</li>
                 <li>D.I.BLOGについて</li>
-                <li>登録フォーム</li>
+                <li>
+                    <s:form action="HomeAction">
+                        <s:submit value="アカウント登録" />
+                    </s:form>
+                </li>
                 <li>問い合わせ</li>
                 <li>その他</li>
             </ul>
