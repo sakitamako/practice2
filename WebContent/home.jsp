@@ -20,16 +20,13 @@
 
     <body>
         <img src="diblog_logo.jpg">
-        <img src="canva.jpg">
         <header>
             <ul>
                 <li>トップ</li>
                 <li>プロフィール</li>
                 <li>D.I.BLOGについて</li>
                 <li>
-                    <s:form action="HomeAction">
-                        <s:submit value="アカウント登録" />
-                    </s:form>
+                    <a href='<s:url action="HomeAction" />'>アカウント登録</a>
                 </li>
                 <li>問い合わせ</li>
                 <li>その他</li>

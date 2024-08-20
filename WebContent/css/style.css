@@ -20,6 +20,17 @@ header ul li {
     line-height: 60px;
 }
 
+a {
+    color: #ffffff;
+    float: left;
+    color: white;
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: sans-serif;
+    line-height: 60px;
+}
+
 .main {
     width: 100%;
     margin: 0 auto;
