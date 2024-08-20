@@ -97,7 +97,7 @@ table {
                                 <label>名前（姓）</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserName1" value="" />
                             </td>
                         </tr>
                         <tr>
@@ -105,87 +105,87 @@ table {
                                 <label>名前（名）</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserUnderName1" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>名前（姓）</label>
+                                <label>カナ（姓）</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>名前（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserName2" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>名前（姓）</label>
+                                <label>カナ（姓）</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>名前（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserUnderName2" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>名前（姓）</label>
+                                <label>メールアドレス</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>名前（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserMail" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>名前（姓）</label>
+                                <label>パスワード</label>
                             </td>
                             <td>
-                                <input type="text" name="loginUserId" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>名前（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="loginUserId" value="" />
+                                <input type="text" name="UserPassword" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>ログインPASS：</label>
+                                <label>性別</label>
                             </td>
                             <td>
-                                <input type="text" name="loginPassword" value="" />
+                                <input type="text" name="ManAndWoman" value="" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>ユーザー名：</label>
+                                <label>郵便番号</label>
                             </td>
                             <td>
-                                <input type="text" name="userName" value="" />
+                                <input type="text" name="PostCode" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>住所（都道府県）</label>
+                            </td>
+                            <td>
+                                <input type="text" name="Prefectures" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>住所（市区町村）</label>
+                            </td>
+                            <td>
+                                <input type="text" name="Municipalities" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>住所（番地）</label>
+                            </td>
+                            <td>
+                                <input type="text" name="StreetAddress" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>アカウント権限</label>
+                            </td>
+                            <td>
+                                <input type="text" name="UserAuthority" value="" />
                             </td>
                         </tr>
                         <s:submit value="登録" />
