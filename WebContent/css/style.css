@@ -22,13 +22,6 @@ header ul li {
 
 a {
     color: #ffffff;
-    float: left;
-    color: white;
-    list-style: none;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: sans-serif;
-    line-height: 60px;
 }
 
 .main {
