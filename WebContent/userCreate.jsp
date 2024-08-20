@@ -138,6 +138,7 @@ table {
                             </td>
                             <td>
                                 <input type="text" name="UserPassword" value="" />
+                                <!--  <input type="password" name="XXX">  -->
                             </td>
                         </tr>
                         <tr>
@@ -145,7 +146,8 @@ table {
                                 <label>性別</label>
                             </td>
                             <td>
-                                <input type="text" name="ManAndWoman" value="" />
+                                <input type="radio" name="XXX" value="XXX">男
+                                <input type="radio" name="XXX" value="XXX">女
                             </td>
                         </tr>
                         <tr>
