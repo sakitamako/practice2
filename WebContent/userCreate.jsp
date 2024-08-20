@@ -54,7 +54,8 @@ table {
 #main {
     width: 100%;
     text-align: center;
-    border: 1px solid #333;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
 }
 
 #main h3 {
@@ -67,7 +68,10 @@ table {
     width: 100%;
     font-size: 20px;
     text-align: center;
+    border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #footer {
@@ -198,6 +202,7 @@ table {
                     <a href='<s:url action="HomeAction" />'>こちら</a>
                 </div>
             </div>
+            <p>ナビゲーションバー</p>
         </div>
         <div id="footer">
             <div id="pr"></div>
