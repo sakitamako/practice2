@@ -61,7 +61,7 @@ table {
 #main h3 {
     width: 100%;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 #main p {
@@ -74,8 +74,11 @@ table {
     padding-bottom: 10px;
 }
 
-#footer {
-    width: 100%;
+#main a {
+    width: 1000px;
+    border: 1px solid #333;
+    color: #333;
+    padding: 10px;
 }
 
         </style>
@@ -95,114 +98,67 @@ table {
                     <s:property value="errorMessage" escape="false" />
                 </s:if>
                 <table>
-                    <s:form action="UserCreateConfirmAction">
-                        <tr>
-                            <td>
-                                <label>名前（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserName1" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>名前（名）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserUnderName1" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>カナ（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserName2" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>カナ（姓）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserUnderName2" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>メールアドレス</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserMail" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>パスワード</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserPassword" value="" />
-                                <!--  <input type="password" name="XXX">  -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>性別</label>
-                            </td>
-                            <td>
-                                <input type="radio" name="XXX" value="XXX">男
-                                <input type="radio" name="XXX" value="XXX">女
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>郵便番号</label>
-                            </td>
-                            <td>
-                                <input type="text" name="PostCode" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>住所（都道府県）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="Prefectures" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>住所（市区町村）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="Municipalities" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>住所（番地）</label>
-                            </td>
-                            <td>
-                                <input type="text" name="StreetAddress" value="" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>アカウント権限</label>
-                            </td>
-                            <td>
-                                <input type="text" name="UserAuthority" value="" />
-                            </td>
-                        </tr>
-                        <s:submit value="登録" />
-                    </s:form>
-                </table>
-                <div>
-                    <span>前画面に戻る場合は</span>
-                    <a href='<s:url action="HomeAction" />'>こちら</a>
-                </div>
+				<tr>
+					<td><label>名前（姓）</label></td>
+					<td><input type="text" name="UserName1" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>名前（名）</label></td>
+					<td><input type="text" name="UserUnderName1" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>カナ（姓）</label></td>
+					<td><input type="text" name="UserName2" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>カナ（名）</label></td>
+					<td><input type="text" name="UserUnderName2" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>メールアドレス</label></td>
+					<td><input type="text" name="UserMail" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>パスワード</label></td>
+					<td><input type="text" name="UserPassword" value="" /> <!--  <input type="password" name="XXX">  -->
+					</td>
+				</tr>
+				<tr>
+					<td><label>性別</label></td>
+					<td><input type="radio" name="XXX" value="XXX">男<input type="radio" name="XXX" value="XXX">女</td>
+				</tr>
+				<tr>
+					<td><label>郵便番号</label></td>
+					<td><input type="text" name="PostCode" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>住所（都道府県）</label></td>
+					<td><input type="text" name="Prefectures" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>住所（市区町村）</label></td>
+					<td><input type="text" name="Municipalities" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>住所（番地）</label></td>
+					<td><input type="text" name="StreetAddress" value="" /></td>
+				</tr>
+				<tr>
+					<td><label>アカウント権限</label></td>
+					<td><input type="text" name="UserAuthority" value="" /></td>
+				</tr>
+			</table>
+			<br>
+			<a href='<s:url action="UserCreateConfirmAction" />'>確認する</a>
+			<br>
+            <div>
+                <br>
+                <span>前画面に戻る場合は</span>
+                <a href='<s:url action="HomeAction" />'>こちら</a>
+                <br>
             </div>
-            <p>ナビゲーションバー</p>
+            </div>
+           <p>フッター</p>
         </div>
         <div id="footer">
             <div id="pr"></div>
