@@ -7,7 +7,6 @@ use regist;
 drop table if exists login_user_transaction;
 
 create table login_user_transaction(
-id int not null primary key auto_increment,
 id int(100) unique,
 family_name varchar(100),
 last_name varchar(100),
