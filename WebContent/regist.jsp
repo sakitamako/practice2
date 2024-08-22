@@ -100,27 +100,27 @@ table {
                 <table>
 				<tr>
 					<td><label>名前（姓）</label></td>
-					<td><input type="text" name="UserName1" value="" /></td>
+					<td><input type="text" name="family_name" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>名前（名）</label></td>
-					<td><input type="text" name="UserUnderName1" value="" /></td>
+					<td><input type="text" name="last_name" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>カナ（姓）</label></td>
-					<td><input type="text" name="UserName2" value="" /></td>
+					<td><input type="text" name="family_name_kana" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>カナ（名）</label></td>
-					<td><input type="text" name="UserUnderName2" value="" /></td>
+					<td><input type="text" name="last_name_kana" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>メールアドレス</label></td>
-					<td><input type="text" name="UserMail" value="" /></td>
+					<td><input type="text" name="mail" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>パスワード</label></td>
-					<td><input type="text" name="UserPassword" value="" /> <!--  <input type="password" name="XXX">  -->
+					<td><input type="text" name="password" value="" /> <!--  <input type="password" name="XXX">  -->
 					</td>
 				</tr>
 				<tr>
@@ -129,27 +129,27 @@ table {
 				</tr>
 				<tr>
 					<td><label>郵便番号</label></td>
-					<td><input type="text" name="PostCode" value="" /></td>
+					<td><input type="text" name="postal_code" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（都道府県）</label></td>
-					<td><input type="text" name="Prefectures" value="" /></td>
+					<td><input type="text" name="prefecture" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（市区町村）</label></td>
-					<td><input type="text" name="Municipalities" value="" /></td>
+					<td><input type="text" name="address_1" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（番地）</label></td>
-					<td><input type="text" name="StreetAddress" value="" /></td>
+					<td><input type="text" name="address_2" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>アカウント権限</label></td>
-					<td><input type="text" name="UserAuthority" value="" /></td>
+					<td><input type="text" name="authority" value="" /></td>
 				</tr>
 			</table>
 			<br>
-			<a href='<s:url action="UserCreateConfirmAction" />'>確認する</a>
+			<a href='<s:url action="Regist_ConfirmAction" />'>確認する</a>
 			<br>
             <div>
                 <br>

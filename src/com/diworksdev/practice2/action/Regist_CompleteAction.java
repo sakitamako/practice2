@@ -24,7 +24,7 @@ import com.opensymphony.xwork2.ActionSupport;
 上記の手順で実装したフィールドを用意する
 これにより、このActionクラスのsessionフィールドへ、Struts2が自動的にHttpSessionの内容をMapの型で格納します。*/
 
-public class UserCreateCompleteAction extends ActionSupport implements SessionAware {
+public class Regist_CompleteAction extends ActionSupport implements SessionAware {
 
 	//フィールド変数
 	//JSPから受け取る値

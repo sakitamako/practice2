@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 //struts2が持つActionSupportというクラスを継承
 //（Actionクラスは基本的にこのクラスを継承）
 //LoginAciton（子クラス） extends（継承） ActionSupport（親クラス）
-public class UserCreateAction extends ActionSupport {
+public class RegistAction extends ActionSupport {
 
 	//新規ユーザー登録はボタンを押したらサクセスが返される、userCreate.jsp画面に遷移する
 	//struts.xmlで指定しているから！
