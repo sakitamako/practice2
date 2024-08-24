@@ -29,9 +29,18 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 	//フィールド変数
 	//JSPから受け取る値
 	//※必ずJSPでの定義と同じ名前にする
-	private String loginUserId;
-	private String loginPassword;
-	private String userName;
+	private String family_name;
+	private String last_name;
+	private String family_name_kana;
+	private String last_name_kana;
+	private String mail;
+	private String password;
+	private String gender;
+	private String postal_code;
+	private String prefecture;
+	private String address_1;
+	private String address_2;
+	private String authority;
 
 	//Map<String, Object>=キーを値にマッピングするオブジェクト。
 	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
@@ -40,14 +49,14 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 	public Map<String, Object> session;
 
 	//②userCreateCompleteDAOのインスタンス化（コピーして代入）
-	private RegistCompleteDAO userCreateCompleteDAO = new RegistCompleteDAO();
+	private RegistCompleteDAO RegistCompleteDAO = new RegistCompleteDAO();
 
 	//全てのクラス 変数 変数名(struts) throws=例外を意図的に起こすことが出来る処理のこと。
 	public String execute() throws SQLException {
 
 		//DAOを経由して入力された内容をDBに登録します。
 		//DAOのcreateUserに記憶しているid,pass,nameを取得してテキストで表す文字列を返す
-		userCreateCompleteDAO.cerateUser(session.get("loginUserId").toString(), session.get("loginPassword").toString(), session.get("userName").toString());
+		RegistCompleteDAO.cerateUser(session.get("loginUserId").toString(), session.get("loginPassword").toString(), session.get("userName").toString());
 
 		//変数・文字列 result=SUCCESS
 		//userCreateComplete.jspに遷移する
