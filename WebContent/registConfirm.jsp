@@ -14,7 +14,7 @@
         <meta http-equiv="imagetoolbar" content="no" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <title>Regist_Confirm画面</title>
+        <title>RegistConfirm画面</title>
 
         <style type="text/css">
 
@@ -194,10 +194,10 @@ table {
                         </tr>
                         <tr>
                             <td>
-                                <a href='<s:url action="Regist_ConfirmAction" />'>前に戻る</a>
-                                <input type="button" value="前に戻る" onclick="submitAction('Regist_ConfirmAction')" />
-                                <a href='<s:url action="Regist_CompleteAction" />'>登録する</a>
-                                <input type="button" value="登録する" onclick="submitAction('Regist_CompleteAction')" />
+                                <a href='<s:url action="RegistConfirmAction" />'>前に戻る</a>
+                                <input type="button" value="前に戻る" onclick="submitAction('RegistConfirmAction')" />
+                                <a href='<s:url action="RegistCompleteAction" />'>登録する</a>
+                                <input type="button" value="登録する" onclick="submitAction('RegistCompleteAction')" />
                             </td>
                         </tr>
                     </s:form>

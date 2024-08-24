@@ -22,17 +22,17 @@
             <result name="success">home.jsp</result>
         </action>
 
-        <action name="UserCreateAction" class="com.diworksdev.practice2.action.UserCreateAction" method="execute">
-            <result name="success">userCreate.jsp</result>
+        <action name="RegistAction" class="com.diworksdev.practice2.action.RegistAction" method="execute">
+            <result name="success">regist.jsp</result>
         </action>
 
-        <action name="UserCreateConfirmAction" class="com.diworksdev.practice2.action.UserCreateConfirmAction" method="execute">
-            <result name="success">userCreateConfirm.jsp</result>
-            <result name="error">userCreate.jsp</result>
+        <action name="RegistConfirmAction" class="com.diworksdev.practice2.action.RegistConfirmAction" method="execute">
+            <result name="success">registConfirm.jsp</result>
+            <result name="error">regist.jsp</result>
         </action>
 
-        <action name="UserCreateCompleteAction" class="com.diworksdev.practice2.action.UserCreateCompleteAction" method="execute">
-            <result name="success">userCreateComplete.jsp</result>
+        <action name="RegistCompleteAction" class="com.diworksdev.practice2.action.RegistCompleteAction" method="execute">
+            <result name="success">registComplete.jsp</result>
         </action>
 
     </package>

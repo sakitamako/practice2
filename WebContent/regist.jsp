@@ -14,7 +14,7 @@
         <meta http-equiv="imagetoolbar" content="no" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <title>UserCreate画面</title>
+        <title>Regist画面</title>
 
         <style type="text/css">
 
@@ -149,7 +149,7 @@ table {
 				</tr>
 			</table>
 			<br>
-			<a href='<s:url action="Regist_ConfirmAction" />'>確認する</a>
+			<a href='<s:url action="RegistConfirmAction" />'>確認する</a>
 			<br>
             <div>
                 <br>

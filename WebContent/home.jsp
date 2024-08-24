@@ -26,7 +26,7 @@
                 <li>プロフィール</li>
                 <li>D.I.BLOGについて</li>
                 <li>
-                    <a href='<s:url action="UserCreateAction" />'>アカウント登録</a>
+                    <a href='<s:url action="RegistAction" />'>アカウント登録</a>
                 </li>
                 <li>問い合わせ</li>
                 <li>その他</li>
