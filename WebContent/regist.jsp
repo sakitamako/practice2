@@ -101,6 +101,9 @@ table {
 				<tr>
 					<td><label>名前（姓）</label></td>
 					<td><input type="text" name="family_name" value="" /></td>
+					<s:if test="errorMessage != ''">
+                        <s:property value="errorMessage" escape="false" />
+                    </s:if>
 				</tr>
 				<tr>
 					<td><label>名前（名）</label></td>

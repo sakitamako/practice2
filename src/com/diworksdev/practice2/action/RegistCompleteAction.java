@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.diworksdev.practice2.dao.UserCreateCompleteDAO;
+import com.diworksdev.practice2.dao.RegistCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 //ユーザー登録機能
@@ -40,7 +40,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 	public Map<String, Object> session;
 
 	//②userCreateCompleteDAOのインスタンス化（コピーして代入）
-	private UserCreateCompleteDAO userCreateCompleteDAO = new UserCreateCompleteDAO();
+	private RegistCompleteDAO userCreateCompleteDAO = new RegistCompleteDAO();
 
 	//全てのクラス 変数 変数名(struts) throws=例外を意図的に起こすことが出来る処理のこと。
 	public String execute() throws SQLException {

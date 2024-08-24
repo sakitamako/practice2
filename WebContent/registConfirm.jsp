@@ -95,7 +95,7 @@ table {
             </div>
             <div>
                 <table>
-                    <s:form action="Regist_CompleteAction">
+                    <s:form action="RegistCompleteAction">
                         <tr id="box">
                             <td>
                                 <label>名前（姓）</label>
