@@ -32,8 +32,8 @@ public class RegistCompleteDAO {
 	 */
 	private String sql = "INSERT INTO login_user_transaction("
 			+ "family_name, last_name, family_name_kana,"
-			+ "last_name_kana, mail, password, gender, postal_code, "
-			+ "prefecture, address_1, address_2, authority) "
+			+ "last_name_kana, mail, password, gender, postal_code,"
+			+ "prefecture, address_1, address_2, authority)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	// 全てのクラス 変数 変数名の中の引数を throws=例外を意図的に起こすことが出来る処理のこと。

@@ -61,9 +61,8 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		// ! aとbとcがtrueの場合処理は実行しない
 		// && aとbとcが共にtrueの時に処理を実行する
 		if (!(family_name.equals("")) && !(last_name.equals("")) && !(family_name_kana.equals(""))
-				&& !(last_name_kana.equals("")) && !(mail.equals("")) && !(password.equals("")) && !(gender == 0)
-				&& !(postal_code == 0) && !(prefecture.equals("")) && !(address_1.equals(""))
-				&& !(address_2.equals("")) && !(authority == 0)) {
+				&& !(last_name_kana.equals("")) && !(mail.equals("")) && !(password.equals(""))
+				&& !(prefecture.equals("")) && !(address_1.equals("")) && !(address_2.equals(""))) {
 
 			// 空文字の部分に値が入っていたらsessionにそれぞれ記憶する
 			session.put("family_name", family_name);
@@ -72,12 +71,9 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 			session.put("last_name_kana", last_name_kana);
 			session.put("mail", mail);
 			session.put("password", password);
-			session.put("gender", gender);
-			session.put("postal_code", postal_code);
 			session.put("prefecture", prefecture);
 			session.put("address_1", address_1);
 			session.put("address_2", address_2);
-			session.put("authority", authority);
 
 		} else {
 
@@ -87,6 +83,20 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 			result = ERROR;
 
 		}
+		// 空文字の部分に値が入っていたら処理を実行する、サクセス！userCreateConfirm.jsp画面に遷移する
+		return result;
+
+	}
+
+	// 全てのクラス 変数 変数名(struts)//メソッド（操作）
+	public String execute1() {
+
+		// 初期値、購入ボタン押したらbuyItemConfirm.jspに遷移する
+		String result = SUCCESS;
+
+		session.put("gender", gender);
+		session.put("postal_code", postal_code);
+		session.put("authority", authority);
 
 		// Integerクラスは、プリミティブ型intの値をオブジェクトにラップします。Integer型のオブジェクトには、型がintの単一フィールドが含まれます。
 		// さらにこのクラスは、intをStringに、Stringをintに変換する各種メソッドや、intの処理時に役立つ定数およびメソッドも提供します。
@@ -142,8 +152,8 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 		}
 
-		//戻り値
-		//処理結果の内容を上記44行目のresultに渡す
+		// 戻り値
+		// 処理結果の内容を上記44行目のresultに渡す
 		return result;
 
 	}

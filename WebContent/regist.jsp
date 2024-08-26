@@ -118,7 +118,7 @@ table {
 				</tr>
 				<tr>
 					<td><label>パスワード</label></td>
-					<td><input type="text" name="password" value="" /> <!--  <input type="password" name="XXX">  -->
+					<td><input type="text" name="password" value="" />
 					</td>
 				</tr>
 				<tr>
