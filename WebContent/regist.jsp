@@ -124,8 +124,8 @@ table {
 				<tr>
 					<td><label>性別</label></td>
 					<td><select name="gender">
-                            <option value="1" selected="selected">男</option>
-                            <option value="2">女</option>
+                            <option value="0" selected="selected">男</option>
+                            <option value="1">女</option>
                        </select>
                    </td>
 				</tr>
@@ -148,8 +148,8 @@ table {
 				<tr>
 					<td><label>アカウント権限</label></td>
 					<td><select name="authority">
-							<option value="1" selected="selected">一般</option>
-							<option value="2">管理者</option>
+							<option value="0" selected="selected">一般</option>
+							<option value="1">管理者</option>
 					   </select>
 					</td>
 				</tr>
