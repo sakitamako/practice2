@@ -123,10 +123,9 @@ table {
 				</tr>
 				<tr>
 					<td><label>性別</label></td>
-					<td><select name="userGender">
-                            <option value="0" selected="selected">男</option>
-                            <option value="1">女</option>
-                       </select>
+					<td>
+					   <input type="radio" name="userGender" value="0" checked="checked">男性
+                       <input type="radio" name="userGender" value="1">女性
                    </td>
 				</tr>
 				<tr>
@@ -147,10 +146,9 @@ table {
 				</tr>
 				<tr>
 					<td><label>アカウント権限</label></td>
-					<td><select name="userAuthority">
-							<option value="0" selected="selected">一般</option>
-							<option value="1">管理者</option>
-					   </select>
+					<td>
+					   <input type="radio" name="userAuthority" value="0" checked="checked">一般
+                       <input type="radio" name="userAuthority" value="1">管理者
 					</td>
 				</tr>
 			</table>
