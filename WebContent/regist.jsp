@@ -98,32 +98,32 @@ table {
 			<table>
 				<tr>
 					<td><label>名前（姓）</label></td>
-					<td><input type="text" name="family_name" value="" /></td>
+					<td><input type="text" name="userFamily_name" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>名前（名）</label></td>
-					<td><input type="text" name="last_name" value="" /></td>
+					<td><input type="text" name="userLast_name" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>カナ（姓）</label></td>
-					<td><input type="text" name="family_name_kana" value="" /></td>
+					<td><input type="text" name="userFamily_name_kana" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>カナ（名）</label></td>
-					<td><input type="text" name="last_name_kana" value="" /></td>
+					<td><input type="text" name="userLast_name_kana" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>メールアドレス</label></td>
-					<td><input type="text" name="mail" value="" /></td>
+					<td><input type="text" name="userMail" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>パスワード</label></td>
-					<td><input type="text" name="password" value="" />
+					<td><input type="text" name="userPassword" value="" />
 					</td>
 				</tr>
 				<tr>
 					<td><label>性別</label></td>
-					<td><select name="gender">
+					<td><select name="userGender">
                             <option value="0" selected="selected">男</option>
                             <option value="1">女</option>
                        </select>
@@ -131,23 +131,23 @@ table {
 				</tr>
 				<tr>
 					<td><label>郵便番号</label></td>
-					<td><input type="text" name="postal_code" value="" /></td>
+					<td><input type="text" name="userPostal_code" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（都道府県）</label></td>
-					<td><input type="text" name="prefecture" value="" /></td>
+					<td><input type="text" name="userPrefecture" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（市区町村）</label></td>
-					<td><input type="text" name="address_1" value="" /></td>
+					<td><input type="text" name="userAddress_1" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>住所（番地）</label></td>
-					<td><input type="text" name="address_2" value="" /></td>
+					<td><input type="text" name="userAddress_2" value="" /></td>
 				</tr>
 				<tr>
 					<td><label>アカウント権限</label></td>
-					<td><select name="authority">
+					<td><select name="userAuthority">
 							<option value="0" selected="selected">一般</option>
 							<option value="1">管理者</option>
 					   </select>

@@ -101,7 +101,7 @@ table {
                                 <label>名前（姓）</label>
                             </td>
                             <td>
-                                <s:property value="family_name" escape="false" />
+                                <s:property value="userFamily_name" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -109,7 +109,7 @@ table {
                                 <label>名前（名）</label>
                             </td>
                             <td>
-                                <s:property value="last_name" escape="false" />
+                                <s:property value="userLast_name" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -117,7 +117,7 @@ table {
                                 <label>カナ（姓）</label>
                             </td>
                             <td>
-                                <s:property value="family_name_kana" escape="false" />
+                                <s:property value="userFamily_name_kana" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -125,7 +125,7 @@ table {
                                 <label>カナ（名）</label>
                             </td>
                             <td>
-                                <s:property value="last_name_kana" escape="false" />
+                                <s:property value="userLast_name_kana" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -133,7 +133,7 @@ table {
                                 <label>メールアドレス</label>
                             </td>
                             <td>
-                                <s:property value="mail" escape="false" />
+                                <s:property value="userMail" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -141,7 +141,7 @@ table {
                                 <label>パスワード</label>
                             </td>
                             <td>
-                                <s:property value="password" escape="false" />
+                                <s:property value="userPassword" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -149,7 +149,7 @@ table {
                                 <label>性別</label>
                             </td>
                             <td>
-                                <s:property value="gender" escape="false" />
+                                <s:property value="userGender" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -157,7 +157,7 @@ table {
                                 <label>郵便番号</label>
                             </td>
                             <td>
-                                <s:property value="postal_code" escape="false" />
+                                <s:property value="userPostal_code" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -165,7 +165,7 @@ table {
                                 <label>住所（都道府県）</label>
                             </td>
                             <td>
-                                <s:property value="prefecture" escape="false" />
+                                <s:property value="userPrefecture" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -173,7 +173,7 @@ table {
                                 <label>住所（市区町村）</label>
                             </td>
                             <td>
-                                <s:property value="address_1" escape="false" />
+                                <s:property value="userAddress_1" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -181,7 +181,7 @@ table {
                                 <label>住所（番地）</label>
                             </td>
                             <td>
-                                <s:property value="address_2" escape="false" />
+                                <s:property value="userAddress_2" escape="false" />
                             </td>
                         </tr>
                         <tr id="box">
@@ -189,15 +189,13 @@ table {
                                 <label>アカウント権限</label>
                             </td>
                             <td>
-                                <s:property value="authority" escape="false" />
+                                <s:property value="userAuthority" escape="false" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href='<s:url action="RegistConfirmAction" />'>前に戻る</a>
-                                <input type="button" value="前に戻る" onclick="submitAction('RegistConfirmAction')" />
+                                <a href='<s:url action="RegistAction" />'>前に戻る</a>
                                 <a href='<s:url action="RegistCompleteAction" />'>登録する</a>
-                                <input type="button" value="登録する" onclick="submitAction('RegistCompleteAction')" />
                             </td>
                         </tr>
                     </s:form>

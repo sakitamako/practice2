@@ -29,18 +29,18 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 	// フィールド変数
 	// JSPから受け取る値
 	// ※必ずJSPでの定義と同じ名前にする
-	private String family_name;
-	private String last_name;
-	private String family_name_kana;
-	private String last_name_kana;
-	private String mail;
-	private String password;
-	private String gender;
-	private String postal_code;
-	private String prefecture;
-	private String address_1;
-	private String address_2;
-	private String authority;
+	private String userFamily_name;
+	private String userLast_name;
+	private String userFamily_name_kana;
+	private String userLast_name_kana;
+	private String userMail;
+	private String userPassword;
+	private String userGender;
+	private String userPostal_code;
+	private String userPrefecture;
+	private String userAddress_1;
+	private String userAddress_2;
+	private String userAuthority;
 
 	// Map<String, Object>=キーを値にマッピングするオブジェクト。
 	// マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
@@ -56,12 +56,12 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 
 		// DAOを経由して入力された内容をDBに登録します。
 		// DAOのcreateUserに記憶しているid,pass,nameを取得してテキストで表す文字列を返す
-		RegistCompleteDAO.regist(session.get("family_name").toString(), session.get("last_name").toString(),
-				session.get("family_name_kana").toString(), session.get("last_name_kana").toString(),
-				session.get("mail").toString(), session.get("password").toString(), session.get("gender").toString(),
-				session.get("postal_code").toString(), session.get("prefecture").toString(),
-				session.get("address_1").toString(), session.get("address_2").toString(),
-				session.get("authority").toString());
+		RegistCompleteDAO.regist(session.get("userFamily_name").toString(), session.get("userLast_name").toString(),
+				session.get("userFamily_name_kana").toString(), session.get("userLast_name_kana").toString(),
+				session.get("userMail").toString(), session.get("userPassword").toString(), session.get("userGender").toString(),
+				session.get("userPostal_code").toString(), session.get("userPrefecture").toString(),
+				session.get("userAddress_1").toString(), session.get("userAddress_2").toString(),
+				session.get("userAuthority").toString());
 
 		// 変数・文字列 result=SUCCESS
 		// userCreateComplete.jspに遷移する
@@ -73,179 +73,182 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 
 	}
 
+	// ・getterは「フィールド値を返却する事だけ」
+	// ・setterは「値を更新する事だけ」
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
-	public String getFamily_name() {
-		return family_name;
+	public String getUserFamily_name() {
+		return userFamily_name;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
-	public void setFamily_name(String family_name) {
+	public void setUserFamily_name(String userFamily_name) {
 
 		// thisという変数を経由して、自分自身のインスタンスのメソッドを呼び出す
-		this.family_name = family_name;
+		this.userFamily_name = userFamily_name;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったloginPasswordフィールドの値をuserCreateConfirm.jspに渡している
-	public String getLast_name() {
-		return last_name;
+	public String getUserLast_name() {
+		return userLast_name;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のloginPasswordフィールドに代入して格納
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setUserLast_name(String userLast_name) {
+		this.userLast_name = userLast_name;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
-	public String getFamily_name_kana() {
-		return family_name_kana;
+	public String getUserFamily_name_kana() {
+		return userFamily_name_kana;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のuserNameフィールドに代入して格納
-	public void setFamily_name_kana(String family_name_kana) {
-		this.family_name_kana = family_name_kana;
+	public void setUserFamily_name_kana(String userFamily_name_kana) {
+		this.userFamily_name_kana = userFamily_name_kana;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
-	public String getLast_name_kana() {
-		return last_name_kana;
+	public String getUserLast_name_kana() {
+		return userLast_name_kana;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
-	public void setLast_name_kana(String last_name_kana) {
+	public void setUserLast_name_kana(String userLast_name_kana) {
 
 		// thisという変数を経由して、自分自身のインスタンスのメソッドを呼び出す
-		this.last_name_kana = last_name_kana;
+		this.userLast_name_kana = userLast_name_kana;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったloginPasswordフィールドの値をuserCreateConfirm.jspに渡している
-	public String getMail() {
-		return mail;
+	public String getUserMail() {
+		return userMail;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のloginPasswordフィールドに代入して格納
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setUserMail(String userMail) {
+		this.userMail = userMail;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
-	public String getPassword() {
-		return password;
+	public String getUserPassword() {
+		return userPassword;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のuserNameフィールドに代入して格納
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
-	public String getGender() {
-		return gender;
+	public String getUserGender() {
+		return userGender;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
-	public void setGender(String gender) {
+	public void setUserGender(String userGender) {
 
 		// thisという変数を経由して、自分自身のインスタンスのメソッドを呼び出す
-		this.gender = gender;
+		this.userGender = userGender;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったloginPasswordフィールドの値をuserCreateConfirm.jspに渡している
-	public String getPostal_code() {
-		return postal_code;
+	public String getUserPostal_code() {
+		return userPostal_code;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のloginPasswordフィールドに代入して格納
-	public void setPostal_code(String postal_code) {
-		this.postal_code = postal_code;
+	public void setUserPostal_code(String userPostal_code) {
+		this.userPostal_code = userPostal_code;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
-	public String getPrefecture() {
-		return prefecture;
+	public String getUserPrefecture() {
+		return userPrefecture;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のuserNameフィールドに代入して格納
-	public void setPrefecture(String prefecture) {
-		this.prefecture = prefecture;
+	public void setUserPrefecture(String userPrefecture) {
+		this.userPrefecture = userPrefecture;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
-	public String getAddress_1() {
-		return address_1;
+	public String getUserAddress_1() {
+		return userAddress_1;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
-	public void setAddress_1(String address_1) {
+	public void setUserAddress_1(String userAddress_1) {
 
 		// thisという変数を経由して、自分自身のインスタンスのメソッドを呼び出す
-		this.address_1 = address_1;
+		this.userAddress_1 = userAddress_1;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったloginPasswordフィールドの値をuserCreateConfirm.jspに渡している
-	public String getAddress_2() {
-		return address_2;
+	public String getUserAddress_2() {
+		return userAddress_2;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のloginPasswordフィールドに代入して格納
-	public void setAddress_2(String address_2) {
-		this.address_2 = address_2;
+	public void setUserAddress_2(String userAddress_2) {
+		this.userAddress_2 = userAddress_2;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
-	public String getAuthority() {
-		return authority;
+	public String getUserAuthority() {
+		return userAuthority;
 
 	}
 
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のuserNameフィールドに代入して格納
-	public void setAuthority(String authority) {
-		this.authority = authority;
+	public void setUserAuthority(String userAuthority) {
+		this.userAuthority = userAuthority;
 
 	}
 
