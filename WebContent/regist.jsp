@@ -96,61 +96,60 @@ table {
 				<s:property value="errorMessage" escape="false" />
 			</s:if>
 			<table>
-				<tr>
-					<td><label>名前（姓）</label></td>
-					<td><input type="text" name="userFamily_name" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>名前（名）</label></td>
-					<td><input type="text" name="userLast_name" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>カナ（姓）</label></td>
-					<td><input type="text" name="userFamily_name_kana" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>カナ（名）</label></td>
-					<td><input type="text" name="userLast_name_kana" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>メールアドレス</label></td>
-					<td><input type="text" name="userMail" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>パスワード</label></td>
-					<td><input type="text" name="userPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td><label>性別</label></td>
-					<td>
-					   <input type="radio" name="userGender" value="0" checked="checked">男性
-                       <input type="radio" name="userGender" value="1">女性
-                   </td>
-				</tr>
-				<tr>
-					<td><label>郵便番号</label></td>
-					<td><input type="text" name="userPostal_code" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>住所（都道府県）</label></td>
-					<td><input type="text" name="userPrefecture" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>住所（市区町村）</label></td>
-					<td><input type="text" name="userAddress_1" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>住所（番地）</label></td>
-					<td><input type="text" name="userAddress_2" value="" /></td>
-				</tr>
-				<tr>
-					<td><label>アカウント権限</label></td>
-					<td>
-					   <input type="radio" name="userAuthority" value="0" checked="checked">一般
-                       <input type="radio" name="userAuthority" value="1">管理者
-					</td>
-				</tr>
+				<s:form action="registAction">
+					<tr>
+						<td><label>名前（姓）</label></td>
+						<td><input type="text" name="userFamily_name" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>名前（名）</label></td>
+						<td><input type="text" name="userLast_name" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>カナ（姓）</label></td>
+						<td><input type="text" name="userFamily_name_kana" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>カナ（名）</label></td>
+						<td><input type="text" name="userLast_name_kana" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>メールアドレス</label></td>
+						<td><input type="text" name="userMail" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>パスワード</label></td>
+						<td><input type="text" name="userPassword" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>性別</label></td>
+						<td><input type="radio" name="userGender" value="0"
+							checked="checked">男性 <input type="radio"
+							name="userGender" value="1">女性</td>
+					</tr>
+					<tr>
+						<td><label>郵便番号</label></td>
+						<td><input type="text" name="userPostal_code" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>住所（都道府県）</label></td>
+						<td><input type="text" name="userPrefecture" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>住所（市区町村）</label></td>
+						<td><input type="text" name="userAddress_1" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>住所（番地）</label></td>
+						<td><input type="text" name="userAddress_2" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>アカウント権限</label></td>
+						<td><input type="radio" name="userAuthority" value="0"
+							checked="checked">一般 <input type="radio"
+							name="userAuthority" value="1">管理者</td>
+					</tr>
+				</s:form>
 			</table>
 			<br> <a href='<s:url action="RegistConfirmAction" />'>確認する</a> <br>
 			<div>

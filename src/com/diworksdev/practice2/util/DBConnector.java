@@ -45,7 +45,7 @@ public class DBConnector {
 		}
 
 		//Mysqlに接続できたか情報を渡す
-		return con ;
+		return con;
 
 	}
 
