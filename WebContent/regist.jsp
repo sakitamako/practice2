@@ -96,7 +96,7 @@ table {
 				<s:property value="errorMessage" escape="false" />
 			</s:if>
 			<table>
-				<s:form action="registAction">
+				<s:form action="registConfirmAction">
 					<tr>
 						<td><label>名前（姓）</label></td>
 						<td><input type="text" name="userFamily_name" value="" /></td>
@@ -123,9 +123,8 @@ table {
 					</tr>
 					<tr>
 						<td><label>性別</label></td>
-						<td><input type="radio" name="userGender" value="0"
-							checked="checked">男性 <input type="radio"
-							name="userGender" value="1">女性</td>
+						<td><input type="radio" name="userGender" value="0" checked="checked">男性
+						<input type="radio" name="userGender" value="1">女性</td>
 					</tr>
 					<tr>
 						<td><label>郵便番号</label></td>
@@ -145,16 +144,14 @@ table {
 					</tr>
 					<tr>
 						<td><label>アカウント権限</label></td>
-						<td><input type="radio" name="userAuthority" value="0"
-							checked="checked">一般 <input type="radio"
-							name="userAuthority" value="1">管理者</td>
+						<td><input type="radio" name="userAuthority" value="0" checked="checked">一般
+						<input type="radio" name="userAuthority" value="1">管理者</td>
 					</tr>
 				</s:form>
 			</table>
 			<br> <a href='<s:url action="RegistConfirmAction" />'>確認する</a> <br>
 			<div>
-				<br> <span>前画面に戻る場合は</span> <a
-					href='<s:url action="HomeAction" />'>こちら</a> <br>
+				<br> <span>前画面に戻る場合は</span> <a href='<s:url action="HomeAction" />'>こちら</a> <br>
 			</div>
 		</div>
 		<p>フッター</p>

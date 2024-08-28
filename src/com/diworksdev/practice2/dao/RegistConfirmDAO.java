@@ -52,18 +52,18 @@ public class RegistConfirmDAO {
 
 				//DBから取得した情報をDTOクラスに格納
 				//もしresultsetに入っている値が存在していればDTOに格納する
-				registConfirmDTO.setUserFamily_name(resultSet.getString("family_name"));
-				registConfirmDTO.setUserLast_name(resultSet.getString("last_name"));
-				registConfirmDTO.setUserFamily_name_kana(resultSet.getString("family_name_kana"));
-				registConfirmDTO.setUserLast_name_kana(resultSet.getString("last_name_kana"));
-				registConfirmDTO.setUserMail(resultSet.getString("mail"));
-				registConfirmDTO.setUserPassword(resultSet.getString("password"));
-				registConfirmDTO.setUserGender(resultSet.getInt("gender"));
-				registConfirmDTO.setUserPostal_code(resultSet.getInt("postal_code"));
-				registConfirmDTO.setUserPrefecture(resultSet.getString("prefecture"));
-				registConfirmDTO.setUserAddress_1(resultSet.getString("address_1"));
-				registConfirmDTO.setUserAddress_2(resultSet.getString("address_2"));
-				registConfirmDTO.setUserAuthority(resultSet.getInt("authority"));
+				registConfirmDTO.setUserFamily_name(resultSet.getString("userFamily_name"));
+				registConfirmDTO.setUserLast_name(resultSet.getString("userLast_name"));
+				registConfirmDTO.setUserFamily_name_kana(resultSet.getString("userFamily_name_kana"));
+				registConfirmDTO.setUserLast_name_kana(resultSet.getString("userLast_name_kana"));
+				registConfirmDTO.setUserMail(resultSet.getString("userMail"));
+				registConfirmDTO.setUserPassword(resultSet.getString("userPassword"));
+				registConfirmDTO.setUserGender(resultSet.getInt("userGender"));
+				registConfirmDTO.setUserPostal_code(resultSet.getInt("userPostal_code"));
+				registConfirmDTO.setUserPrefecture(resultSet.getString("userPrefecture"));
+				registConfirmDTO.setUserAddress_1(resultSet.getString("userAddress_1"));
+				registConfirmDTO.setUserAddress_2(resultSet.getString("userAddress_2"));
+				registConfirmDTO.setUserAuthority(resultSet.getInt("userAuthority"));
 
 			}
 
