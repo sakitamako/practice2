@@ -10,7 +10,7 @@ import java.util.Date;
 public class DateUtil {
 
 	//全てのクラス 変数 変数名
-	public String getDate() {
+	public String getDateTime() {
 
 		//インスタンス化（コピーして代入）初期値
 		//年、月、日、時間、分、秒の値を取得

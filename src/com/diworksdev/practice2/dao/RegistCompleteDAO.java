@@ -16,7 +16,7 @@ public class RegistCompleteDAO {
 	// 全てのクラス 変数 変数名の中の引数を throws=例外を意図的に起こすことが出来る処理のこと。
 	public void regist(String family_name, String last_name, String family_name_kana, String last_name_kana,
 			String mail, String password, String gender, String postal_code, String prefecture, String address_1,
-			String address_2, String authority) throws SQLException {
+			String address_2, String authority, String registered_time, String update_time) throws SQLException {
 
 		// ②DBConnectorのインスタンス化
 		// DBへの接続準備、DBと会話するためのコード、これでログインできる
@@ -35,11 +35,10 @@ public class RegistCompleteDAO {
 		 * データベースのテーブル上にデータを登録する際に使用されるステートメントの構文=INSERT INTO 1
 		 * つ以上の行のセットをテーブルとして返す＝VALUES=中身のこと 作成したテーブルに情報を格納する
 		 */
-		String sql = "INSERT INTO login_user_transaction("
-				+ "family_name, last_name, family_name_kana,"
-				+ "last_name_kana, mail, password, gender, postal_code,"
-				+ "prefecture, address_1, address_2, authority, insert_date) "
-				+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "SELECT family_name, last_name, family_name_kana, last_name_kana, mail, password, gender, "
+				+ "postal_code, prefecture, address_1, address_2, authority FROM login_user_transaction "
+				+ "DEFAULT NULL cregistered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP "
+				+ "update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,";
 
 		// try.catchはjavaの例外処理のための構文
 		try {
@@ -64,7 +63,7 @@ public class RegistCompleteDAO {
 			preparedStatement.setString(10, address_1);
 			preparedStatement.setString(11, address_2);
 			preparedStatement.setString(12, authority);
-			preparedStatement.setString(13, dateUtil.getDate());
+			preparedStatement.setString(13, dateUtil.getDateTime());
 			preparedStatement.execute();
 
 			// 処理中にSQL関連のエラーが発生した際に実行する処理

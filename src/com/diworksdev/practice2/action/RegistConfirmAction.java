@@ -56,19 +56,6 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		//session.put("userPostal_code", userPostal_code);
 		//session.put("userAuthority", userAuthority);
 
-		// Integerクラスは、プリミティブ型intの値をオブジェクトにラップします。Integer型のオブジェクトには、型がintの単一フィールドが含まれます。
-		// さらにこのクラスは、intをStringに、Stringをintに変換する各種メソッドや、intの処理時に役立つ定数およびメソッドも提供します。
-		// 文字列の引数を解釈し、指定された基数 （数学的記数法の底）の整数値を返します
-		// sessionの中のデータを取得してテキストで表す
-		int intUserGender = Integer.parseInt(session.get("userGende").toString());
-		int intUserPostal_code = Integer.parseInt(session.get("userPostal_code").toString());
-		int intUserAuthority = Integer.parseInt(session.get("userAuthority").toString());
-
-		//セッションに記憶する、
-		session.put("userGender", intUserGender);
-		session.put("userPostal_code", intUserPostal_code);
-		session.put("userAuthority", intUserAuthority);
-
 		String gender0;
 
 		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
@@ -123,6 +110,19 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 			result = ERROR;
 		}
+
+		// Integerクラスは、プリミティブ型intの値をオブジェクトにラップします。Integer型のオブジェクトには、型がintの単一フィールドが含まれます。
+		// さらにこのクラスは、intをStringに、Stringをintに変換する各種メソッドや、intの処理時に役立つ定数およびメソッドも提供します。
+		// 文字列の引数を解釈し、指定された基数 （数学的記数法の底）の整数値を返します
+		// sessionの中のデータを取得してテキストで表す
+		int intUserGender = Integer.parseInt(session.get("userGende").toString());
+		int intUserPostal_code = Integer.parseInt(session.get("userPostal_code").toString());
+		int intUserAuthority = Integer.parseInt(session.get("userAuthority").toString());
+
+		//セッションに記憶する、
+		session.put("userGender", intUserGender);
+		session.put("userPostal_code", intUserPostal_code);
+		session.put("userAuthority", intUserAuthority);
 
 		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
 		// loginUserIdと空文字・何も入ってない時の値が等しい場合、かつ、loginPasswordと空文字・何も入ってない時の値が等しい場合、かつ、userNameと空文字・何も入ってない時の値が等しい場合はelse文に行く！

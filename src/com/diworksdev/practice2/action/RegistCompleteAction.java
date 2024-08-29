@@ -45,7 +45,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 				session.get("userMail").toString(), session.get("userPassword").toString(), session.get("userGender").toString(),
 				session.get("userPostal_code").toString(), session.get("userPrefecture").toString(),
 				session.get("userAddress_1").toString(), session.get("userAddress_2").toString(),
-				session.get("userAuthority").toString());
+				session.get("userAuthority").toString(), session.get("registered_time").toString(), session.get("update_time").toString());
 
 		// 変数・文字列 result=SUCCESS
 		// userCreateComplete.jspに遷移する
