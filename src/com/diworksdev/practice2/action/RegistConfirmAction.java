@@ -23,12 +23,6 @@ import com.opensymphony.xwork2.ActionSupport;
 これにより、このActionクラスのsessionフィールドへ、Struts2が自動的にHttpSessionの内容をMapの型で格納します。*/
 public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
-	//Map<String, Object>=キーを値にマッピングするオブジェクト。
-	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
-    //このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです
-	//全てのクラス 変数 変数名
-	public Map<String, Object> session;
-
 	// フィールド変数
 	// JSPから受け取る値
 	// ※必ずJSPでの定義と同じ名前にする
@@ -45,11 +39,17 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 	private String userAddress_2;
 	//private int userAuthority;
 
+	//Map<String, Object>=キーを値にマッピングするオブジェクト。
+	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
+    //このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです
+	//全てのクラス 変数 変数名
+	public Map<String, Object> session;
+
 	//このクラスのみ 変数 変数名
 	private String errorMessage;
-	private int userGender;
-	private int userPostal_code;
-	private int userAuthority;;
+	//private int userGender;
+	//private int userPostal_code;
+	//private int userAuthority;;
 
 	//メソッド名は「execute」
 	//管理コマンド・メッセージをコマンド・サーバーに送信し、何らかの応答メッセージを待ちます
@@ -57,18 +57,6 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 		//メソッドの戻り値 String result = success; を定義し、初期値としてseccessを代入
 		String result = SUCCESS;
-
-		//userGender = Integer.parseInt(session.get("userGende").toString());
-		//userPostal_code = Integer.parseInt(session.get("userPostal_code").toString());
-		//userAuthority = Integer.parseInt(session.get("userAuthority").toString());
-
-		if (!(userGender == 0) && !(userPostal_code == 0) && !(userAuthority == 0)) {
-
-			session.put("userGender", userGender);
-			session.put("userPostal_code", userPostal_code);
-			session.put("userAuthority", userAuthority);
-
-		}
 
 		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
 		// loginUserIdと空文字・何も入ってない時の値が等しい場合、かつ、loginPasswordと空文字・何も入ってない時の値が等しい場合、かつ、userNameと空文字・何も入ってない時の値が等しい場合はelse文に行く！
@@ -79,15 +67,15 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 				&& !(userPrefecture.equals("")) && !(userAddress_1.equals("")) && !(userAddress_2.equals(""))) {
 
 			// 空文字の部分に値が入っていたらsessionにそれぞれ記憶する
-			session.put("userFamily_name", userFamily_name);
-			session.put("userLast_name", userLast_name);
-			session.put("userFamily_name_kana", userFamily_name_kana);
-			session.put("userLast_name_kana", userLast_name_kana);
-			session.put("userMail", userMail);
-			session.put("userPassword", userPassword);
-			session.put("userPrefecture", userPrefecture);
-			session.put("userAddress_1", userAddress_1);
-			session.put("userAddress_2", userAddress_2);
+			session.put("family_name", userFamily_name);
+			session.put("last_name", userLast_name);
+			session.put("family_name_kana", userFamily_name_kana);
+			session.put("last_name_kana", userLast_name_kana);
+			session.put("mail", userMail);
+			session.put("password", userPassword);
+			session.put("prefecture", userPrefecture);
+			session.put("address_1", userAddress_1);
+			session.put("address_2", userAddress_2);
 
 		} else {
 
@@ -193,7 +181,7 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userPassword = userPassword;
 
 	}
-
+/*
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserGender() {
@@ -223,7 +211,7 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userPostal_code = userPostal_code;
 
 	}
-
+*/
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
 	public String getUserPrefecture() {
@@ -267,7 +255,7 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userAddress_2 = userAddress_2;
 
 	}
-
+/*
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserAuthority() {
@@ -281,7 +269,7 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userAuthority = userAuthority;
 
 	}
-
+*/
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
 	@Override

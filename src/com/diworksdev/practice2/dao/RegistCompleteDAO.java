@@ -15,8 +15,11 @@ public class RegistCompleteDAO {
 
 	// 全てのクラス 変数 変数名の中の引数を throws=例外を意図的に起こすことが出来る処理のこと。
 	public static void regist(String family_name, String last_name, String family_name_kana, String last_name_kana,
-			String mail, String password, String gender, String postal_code, String prefecture, String address_1,
-			String address_2, String authority) throws SQLException {
+			String mail, String password, String prefecture, String address_1,
+			String address_2) throws SQLException {
+
+		//String gender, String postal_code,
+		//String authority
 
 		// このクラスのみ 変数 変数名
 		// ④sql文を書く：値は ? を入れておく（どんな値でも使いまわしできるようにするため
@@ -58,12 +61,12 @@ public class RegistCompleteDAO {
 			preparedStatement.setString(4, last_name_kana);
 			preparedStatement.setString(5, mail);
 			preparedStatement.setString(6, password);
-			preparedStatement.setString(7, gender);
-			preparedStatement.setString(8, postal_code);
+			//preparedStatement.setString(7, gender);
+			//preparedStatement.setString(8, postal_code);
 			preparedStatement.setString(9, prefecture);
 			preparedStatement.setString(10, address_1);
 			preparedStatement.setString(11, address_2);
-			preparedStatement.setString(12, authority);
+			//preparedStatement.setString(12, authority);
 			preparedStatement.setString(13, dateUtil.getDateTime());
 			preparedStatement.execute();
 

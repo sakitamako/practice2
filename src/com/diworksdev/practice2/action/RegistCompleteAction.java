@@ -35,12 +35,12 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 	private String userLast_name_kana;
 	private String userMail;
 	private String userPassword;
-	private int userGender;
-	private int userPostal_code;
+	//private int userGender;
+	//private int userPostal_code;
 	private String userPrefecture;
 	private String userAddress_1;
 	private String userAddress_2;
-	private int userAuthority;
+	//private int userAuthority;
 
 	//Map<String, Object>=キーを値にマッピングするオブジェクト。
 	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
@@ -57,12 +57,15 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 
 		// DAOを経由して入力された内容をDBに登録します。
 		// DAOのcreateUserに記憶しているid,pass,nameを取得してテキストで表す文字列を返す
-		RegistCompleteDAO.regist(session.get("userFamily_name").toString(), session.get("userLast_name").toString(),
-				session.get("userFamily_name_kana").toString(), session.get("userLast_name_kana").toString(),
-				session.get("userMail").toString(), session.get("userPassword").toString(), session.get("userGender").toString(),
-				session.get("userPostal_code").toString(), session.get("userPrefecture").toString(),
-				session.get("userAddress_1").toString(), session.get("userAddress_2").toString(),
-				session.get("userAuthority").toString());
+		RegistCompleteDAO.regist(session.get("family_name").toString(), session.get("last_name").toString(),
+				session.get("family_name_kana").toString(), session.get("last_name_kana").toString(),
+				session.get("mail").toString(), session.get("password").toString(),
+				session.get("prefecture").toString(),
+				session.get("address_1").toString(), session.get("address_2").toString());
+
+		//session.get("userGender").toString(),
+		//session.get("userPostal_code").toString(),
+		//session.get("userAuthority").toString()
 
 		// 変数・文字列 result=SUCCESS
 		// userCreateComplete.jspに遷移する
@@ -164,7 +167,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 		this.userPassword = userPassword;
 
 	}
-
+/*
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserGender() {
@@ -194,7 +197,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 		this.userPostal_code = userPostal_code;
 
 	}
-
+*/
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
 	public String getUserPrefecture() {
@@ -238,7 +241,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 		this.userAddress_2 = userAddress_2;
 
 	}
-
+/*
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserAuthority() {
@@ -252,7 +255,7 @@ public class RegistCompleteAction extends ActionSupport implements SessionAware 
 		this.userAuthority = userAuthority;
 
 	}
-
+*/
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
 	@Override

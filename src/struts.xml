@@ -28,11 +28,12 @@
 
         <action name="RegistConfirmAction" class="com.diworksdev.practice2.action.RegistConfirmAction" method="execute">
             <result name="success">registConfirm.jsp</result>
-            <result name="error">regist.jsp</result>
+            <!--  <result name="error">regist.jsp</result> -->
         </action>
 
         <action name="RegistCompleteAction" class="com.diworksdev.practice2.action.RegistCompleteAction" method="execute">
             <result name="success">registComplete.jsp</result>
+            <!-- <result name="success">registError.jsp</result> -->
         </action>
 
     </package>
