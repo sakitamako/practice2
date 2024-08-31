@@ -23,10 +23,10 @@ import com.opensymphony.xwork2.ActionSupport;
 これにより、このActionクラスのsessionフィールドへ、Struts2が自動的にHttpSessionの内容をMapの型で格納します。*/
 public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
-	// Map<String, Object>=キーを値にマッピングするオブジェクト。
-	// マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
-	// このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです
-	// 全てのクラス 変数 変数名
+	//Map<String, Object>=キーを値にマッピングするオブジェクト。
+	//マップには、同一のキーを複数登録できない。各キーは1つの値にしかマッピングできません。
+    //このインタフェースは、インタフェースというよりむしろ完全に抽象クラスであったDictionaryクラスに代わるものです
+	//全てのクラス 変数 変数名
 	public Map<String, Object> session;
 
 	// フィールド変数
@@ -38,97 +38,43 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 	private String userLast_name_kana;
 	private String userMail;
 	private String userPassword;
-	private int userGender;
-	private int userPostal_code;
+	//private int userGender;
+	//private int userPostal_code;
 	private String userPrefecture;
 	private String userAddress_1;
 	private String userAddress_2;
-	private int userAuthority;
+	//private int userAuthority;
 
-	// メソッド名は「execute」
-	// 管理コマンド・メッセージをコマンド・サーバーに送信し、何らかの応答メッセージを待ちます
+	//このクラスのみ 変数 変数名
+	private String errorMessage;
+	private int userGender;
+	private int userPostal_code;
+	private int userAuthority;;
+
+	//メソッド名は「execute」
+	//管理コマンド・メッセージをコマンド・サーバーに送信し、何らかの応答メッセージを待ちます
 	public String execute() {
 
-		// メソッドの戻り値 String result = success; を定義し、初期値としてseccessを代入
+		//メソッドの戻り値 String result = success; を定義し、初期値としてseccessを代入
 		String result = SUCCESS;
 
-		//session.put("userGender", userGender);
-		//session.put("userPostal_code", userPostal_code);
-		//session.put("userAuthority", userAuthority);
+		//userGender = Integer.parseInt(session.get("userGende").toString());
+		//userPostal_code = Integer.parseInt(session.get("userPostal_code").toString());
+		//userAuthority = Integer.parseInt(session.get("userAuthority").toString());
 
-		String gender0;
+		if (!(userGender == 0) && !(userPostal_code == 0) && !(userAuthority == 0)) {
 
-		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
-		// もしpayが1と等しい場合
-		if (userGender == 0) {
-
-			// paymentに現金払いを代入
-			gender0 = "男性";
-
-			// sessionに記憶
-			session.put("userGender", gender0);
-
-			// そうでない場合
-		} else {
-
-			// paymentにクレジットを代入
-			gender0 = "女性";
-
-			// sessionに記憶
-			session.put("userGender", gender0);
+			session.put("userGender", userGender);
+			session.put("userPostal_code", userPostal_code);
+			session.put("userAuthority", userAuthority);
 
 		}
-
-		String authority0;
-
-		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
-		// もしpayが1と等しい場合
-		if (userAuthority == 0) {
-
-			// paymentに現金払いを代入
-			authority0 = "一般";
-
-			// sessionに記憶
-			session.put("userAuthority", authority0);
-
-			// そうでない場合
-		} else {
-
-			// paymentにクレジットを代入
-			authority0 = "管理者";
-
-			// sessionに記憶
-			session.put("userAuthority", authority0);
-
-		}
-
-		if (userPostal_code >= 0) {
-
-			result = SUCCESS;
-
-		} else {
-
-			result = ERROR;
-		}
-
-		// Integerクラスは、プリミティブ型intの値をオブジェクトにラップします。Integer型のオブジェクトには、型がintの単一フィールドが含まれます。
-		// さらにこのクラスは、intをStringに、Stringをintに変換する各種メソッドや、intの処理時に役立つ定数およびメソッドも提供します。
-		// 文字列の引数を解釈し、指定された基数 （数学的記数法の底）の整数値を返します
-		// sessionの中のデータを取得してテキストで表す
-		int intUserGender = Integer.parseInt(session.get("userGende").toString());
-		int intUserPostal_code = Integer.parseInt(session.get("userPostal_code").toString());
-		int intUserAuthority = Integer.parseInt(session.get("userAuthority").toString());
-
-		//セッションに記憶する、
-		session.put("userGender", intUserGender);
-		session.put("userPostal_code", intUserPostal_code);
-		session.put("userAuthority", intUserAuthority);
 
 		// int型などのプリミティブ型で２つの値が等しいか比較する場合は”==”演算子で比較しますがString型などの参照型の場合はequalsメソッドで比較する
 		// loginUserIdと空文字・何も入ってない時の値が等しい場合、かつ、loginPasswordと空文字・何も入ってない時の値が等しい場合、かつ、userNameと空文字・何も入ってない時の値が等しい場合はelse文に行く！
 		// ! aとbとcがtrueの場合処理は実行しない
 		// && aとbとcが共にtrueの時に処理を実行する
-		if (!(userFamily_name.equals("")) && !(userLast_name.equals("")) && !(userFamily_name_kana.equals(""))
+		 if (!(userFamily_name.equals("")) && !(userLast_name.equals("")) && !(userFamily_name_kana.equals(""))
 				&& !(userLast_name_kana.equals("")) && !(userMail.equals("")) && !(userPassword.equals(""))
 				&& !(userPrefecture.equals("")) && !(userAddress_1.equals("")) && !(userAddress_2.equals(""))) {
 
@@ -145,7 +91,10 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 		} else {
 
+			setErrorMessage("未入力の項目があります。");
+
 			result = ERROR;
+
 		}
 
 		// 戻り値
@@ -244,14 +193,14 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userPassword = userPassword;
 
 	}
-/*
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取った、loginUserIdフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserGender() {
 		return userGender;
 
 	}
-*/
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
 	public void setUserGender(int userGender) {
@@ -260,14 +209,14 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userGender = userGender;
 
 	}
-/*
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったloginPasswordフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserPostal_code() {
 		return userPostal_code;
 
 	}
-*/
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のloginPasswordフィールドに代入して格納
 	public void setUserPostal_code(int userPostal_code) {
@@ -318,14 +267,14 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 		this.userAddress_2 = userAddress_2;
 
 	}
-/*
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// userCreate.jspの値として受け取ったuserNameフィールドの値をuserCreateConfirm.jspに渡している
 	public int getUserAuthority() {
 		return userAuthority;
 
 	}
-*/
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のuserNameフィールドに代入して格納
 	public void setUserAuthority(int userAuthority) {
@@ -341,4 +290,20 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 	}
 
+
+	//フィールド変数に対応したgetterとsetterを定義
+	//Actionクラスから呼び出され、errorMessageフィールドの値をActionに渡す
+	public String getErrorMessage() {
+		return errorMessage;
+
+	}
+
+	//フィールド変数に対応したgetterとsetterを定義
+	//DAOクラスから呼び出され、引数として受け取ったテーブルの値を自身のerrorMessageフィールドに格納
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+
+	}
+
 }
+

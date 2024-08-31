@@ -14,20 +14,9 @@ import com.diworksdev.practice2.util.DateUtil;
 public class RegistCompleteDAO {
 
 	// 全てのクラス 変数 変数名の中の引数を throws=例外を意図的に起こすことが出来る処理のこと。
-	public void regist(String family_name, String last_name, String family_name_kana, String last_name_kana,
+	public static void regist(String family_name, String last_name, String family_name_kana, String last_name_kana,
 			String mail, String password, String gender, String postal_code, String prefecture, String address_1,
-			String address_2, String authority, String registered_time, String update_time) throws SQLException {
-
-		// ②DBConnectorのインスタンス化
-		// DBへの接続準備、DBと会話するためのコード、これでログインできる
-		// Connectionは特定のデータベースとの接続
-		DBConnector dbConnector = new DBConnector();
-
-		// ③getConnectionの呼び出し（DBと接続する）
-		Connection connection = dbConnector.getConnection();
-
-		// このクラスのみ 変数 変数名 インスタンス化（コピーして代入）
-		DateUtil dateUtil = new DateUtil();
+			String address_2, String authority) throws SQLException {
 
 		// このクラスのみ 変数 変数名
 		// ④sql文を書く：値は ? を入れておく（どんな値でも使いまわしできるようにするため
@@ -39,6 +28,18 @@ public class RegistCompleteDAO {
 				+ "postal_code, prefecture, address_1, address_2, authority FROM login_user_transaction "
 				+ "DEFAULT NULL cregistered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP "
 				+ "update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,";
+
+		// ②DBConnectorのインスタンス化
+		// DBへの接続準備、DBと会話するためのコード、これでログインできる
+		// Connectionは特定のデータベースとの接続
+		DBConnector dbConnector = new DBConnector();
+
+		// ③getConnectionの呼び出し（DBと接続する）
+		Connection connection = dbConnector.getConnection();
+
+
+		//このクラスのみ 変数 変数名 インスタンス化（コピーして代入）
+		DateUtil dateUtil = new DateUtil();
 
 		// try.catchはjavaの例外処理のための構文
 		try {

@@ -92,6 +92,9 @@ table {
 			<h3>アカウント登録画面</h3>
 		</div>
 		<div>
+		    <s:if test="errorMessage != ''">
+                <s:property value="errorMessage" escape="false" />
+            </s:if>
 			<table>
 				<s:form action="registConfirmAction">
 					<tr>
