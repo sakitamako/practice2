@@ -13,24 +13,30 @@ import com.diworksdev.practice2.util.DateUtil;
 
 public class RegistCompleteDAO {
 
+	// このクラスのみ 変数 変数名
+	// ④sql文を書く：値は ? を入れておく（どんな値でも使いまわしできるようにするため
+	/*
+	 * データベースのテーブル上にデータを登録する際に使用されるステートメントの構文=INSERT INTO 1
+	 * つ以上の行のセットをテーブルとして返す＝VALUES=中身のこと 作成したテーブルに情報を格納する
+	 */
+	/*String sql = "SELECT family_name, last_name, family_name_kana, last_name_kana, mail, password, gender, "
+			+ "postal_code, prefecture, address_1, address_2, authority FROM login_user_transaction "
+			+ "DEFAULT NULL cregistered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP "
+			+ "update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,";*/
+
 	// 全てのクラス 変数 変数名の中の引数を throws=例外を意図的に起こすことが出来る処理のこと。
-	public static void regist(String family_name, String last_name, String family_name_kana, String last_name_kana,
-			String mail, String password, String prefecture, String address_1,
-			String address_2) throws SQLException {
+	public static void regist(String userFamily_name, String userLast_name, String userFamily_name_kana, String userLast_name_kana,
+			String userMail, String userPassword, String userPrefecture, String userAddress_1,
+			String userAddress_2) throws SQLException {
 
 		//String gender, String postal_code,
 		//String authority
 
-		// このクラスのみ 変数 変数名
-		// ④sql文を書く：値は ? を入れておく（どんな値でも使いまわしできるようにするため
-		/*
-		 * データベースのテーブル上にデータを登録する際に使用されるステートメントの構文=INSERT INTO 1
-		 * つ以上の行のセットをテーブルとして返す＝VALUES=中身のこと 作成したテーブルに情報を格納する
-		 */
-		String sql = "SELECT family_name, last_name, family_name_kana, last_name_kana, mail, password, gender, "
-				+ "postal_code, prefecture, address_1, address_2, authority FROM login_user_transaction "
-				+ "DEFAULT NULL cregistered_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP "
-				+ "update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,";
+		DateUtil dateUtil = new DateUtil();
+
+		String sql = "INSERT INTO login_user_transaction (family_name, last_name, family_name_kana, last_name_kana,"
+				+ " mail, password, gender, postal_code, prefecture, address_1, address_2, authority, update_time) "
+				+ "VALUES(?, ? , ?, ?, ?, ?, ?, ?, ?, ?)";
 
 		// ②DBConnectorのインスタンス化
 		// DBへの接続準備、DBと会話するためのコード、これでログインできる
@@ -42,7 +48,7 @@ public class RegistCompleteDAO {
 
 
 		//このクラスのみ 変数 変数名 インスタンス化（コピーして代入）
-		DateUtil dateUtil = new DateUtil();
+		//DateUtil dateUtil = new DateUtil();
 
 		// try.catchはjavaの例外処理のための構文
 		try {
@@ -55,17 +61,17 @@ public class RegistCompleteDAO {
 
 			// ⑥sql文の?に入れる値をsetする
 			// preparedStatement.setString(1, Id);
-			preparedStatement.setString(1, family_name);
-			preparedStatement.setString(2, last_name);
-			preparedStatement.setString(3, family_name_kana);
-			preparedStatement.setString(4, last_name_kana);
-			preparedStatement.setString(5, mail);
-			preparedStatement.setString(6, password);
+			preparedStatement.setString(1, userFamily_name);
+			preparedStatement.setString(2, userLast_name);
+			preparedStatement.setString(3, userFamily_name_kana);
+			preparedStatement.setString(4, userLast_name_kana);
+			preparedStatement.setString(5, userMail);
+			preparedStatement.setString(6, userPassword);
 			//preparedStatement.setString(7, gender);
 			//preparedStatement.setString(8, postal_code);
-			preparedStatement.setString(9, prefecture);
-			preparedStatement.setString(10, address_1);
-			preparedStatement.setString(11, address_2);
+			preparedStatement.setString(9, userPrefecture);
+			preparedStatement.setString(10, userAddress_1);
+			preparedStatement.setString(11, userAddress_2);
 			//preparedStatement.setString(12, authority);
 			preparedStatement.setString(13, dateUtil.getDateTime());
 			preparedStatement.execute();

@@ -67,15 +67,15 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 				&& !(userPrefecture.equals("")) && !(userAddress_1.equals("")) && !(userAddress_2.equals(""))) {
 
 			// 空文字の部分に値が入っていたらsessionにそれぞれ記憶する
-			session.put("family_name", userFamily_name);
-			session.put("last_name", userLast_name);
-			session.put("family_name_kana", userFamily_name_kana);
-			session.put("last_name_kana", userLast_name_kana);
-			session.put("mail", userMail);
-			session.put("password", userPassword);
-			session.put("prefecture", userPrefecture);
-			session.put("address_1", userAddress_1);
-			session.put("address_2", userAddress_2);
+			session.put("userFamily_name", userFamily_name);
+			session.put("userLast_name", userLast_name);
+			session.put("userFamily_name_kana", userFamily_name_kana);
+			session.put("userLast_name_kana", userLast_name_kana);
+			session.put("userMail", userMail);
+			session.put("userPassword", userPassword);
+			session.put("userPrefecture", userPrefecture);
+			session.put("userAddress_1", userAddress_1);
+			session.put("userAddress_2", userAddress_2);
 
 		} else {
 
@@ -270,6 +270,12 @@ public class RegistConfirmAction extends ActionSupport implements SessionAware {
 
 	}
 */
+
+	public Map<String, Object> getSession() {
+		return session;
+
+	}
+
 	// フィールド変数に対応したgetterとsetterを定義
 	// 全てのクラスのsetの値を自身のsessionフィールドに代入して格納
 	@Override
